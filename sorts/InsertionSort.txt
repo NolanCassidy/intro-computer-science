@@ -1,0 +1,20 @@
+void InsertionSort(apvector<int> & list)
+// This function uses an Insertion Sort to sort an array
+//  ('list') of integers in non-decreasing order.
+{
+   int hold;  // Element to be stored for the open position
+   int position;  // Current element being analyzed
+
+   for (int i=1; i<list.length(); i++)
+   {
+      hold = list[i];
+      position = i;
+
+      while ((position > 0) && (hold < list[position - 1]))
+      {
+         list[position] = list[position-1];
+         position--;
+      }
+      list[position] = hold;
+   }
+}

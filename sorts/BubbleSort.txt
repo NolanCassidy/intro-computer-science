@@ -1,0 +1,20 @@
+void Swap(int & numA, int & numB)
+// This function takes two integer variables
+//  ('numA', 'numB') and interchanges (swaps) them.
+{
+   int temp;  // Temporary variable used during swap
+   temp = numA;
+   numA = numB;
+   numB = temp;
+}
+
+
+void BubbleSort(apvector<int> & list)
+// This function uses a Bubble Sort to sort an array
+//  ('list') of integers in non-decreasing order.
+{
+   for (int i=0; i<list.length(); i++)
+      for (int j=0; j<list.length()-1; j++)
+         if (list[j] > list[j+1])
+            Swap(list[j], list[j+1]);
+}

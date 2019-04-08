@@ -1,0 +1,69 @@
+void Swap(int & numA, int & numB)
+// This function takes two integer variables
+//  ('numA', 'numB') and interchanges (swaps) them.
+{
+   int temp;  // Temporary variable used during swap
+   temp = numA;
+   numA = numB;
+   numB = temp;
+}
+
+
+void Merge(apvector<int> & list, int first, int mid, int last)
+// This function takes an array ('list') of integers and
+//  merges the following two sections (sublists) together:
+//    Left  sublist from list[first]   through list[mid]
+//    Right sublist from list[mid + 1] through list[last]
+//  These two sublists are merged into a new array ('newList').
+//
+// NOTE:  Each sublist must already be in non-decreasing order.
+{
+   int a=first, b=mid + 1, c=first;
+   int total=last - first + 1, loop;
+   apvector<int> newList(list.length());
+
+   for (loop=1; loop<=total; loop++)
+   {
+      if (a > mid)
+         newList[c] = list[b++];
+      else
+         if (b > last)
+            newList[c] = list[a++];
+         else  // Ok to compare; valid data in each sublist
+            if (list[a] < list[b])
+               newList[c] = list[a++];
+            else
+               newList[c] = list[b++];
+      c++;
+   }
+
+   // Copy new (merged) array back to original array
+   for (loop=first; loop<=last; loop++)
+      list[loop] = newList[loop];
+}
+
+
+void Mergesort(apvector<int> & list, int first, int last)
+// This function uses a Mergesort to sort an array
+//  ('list') of integers in non-decreasing order.  This
+//  function is recursive.  The variable 'first' is equal
+//  to the POSITION of the first element in the list;
+//  'last' is equal to the POSITION of the last element.
+{
+   int mid;
+
+   if (first == last);  // Empty case; only 1 value; do nothing
+   else
+      if ((first + 1) == last)  // List of 2 values; swap if necessary
+      {
+         if (list[first] > list[last])
+            Swap(list[first], list[last]);
+      }
+      else  // General case
+      {
+         mid = (first + last) / 2;
+         Mergesort(list, first, mid);
+         Mergesort(list, mid + 1, last);
+         Merge(list, first, mid, last);
+      }
+}

@@ -1,0 +1,28 @@
+void Swap(int & numA, int & numB)
+// This function takes two integer variables
+//  ('numA', 'numB') and interchanges (swaps) them.
+{
+   int temp;  // Temporary variable used during swap
+   temp = numA;
+   numA = numB;
+   numB = temp;
+}
+
+
+void SelectionSort(apvector<int> & list)
+// This function uses a Selection Sort to sort an array
+//  ('list') of integers in non-decreasing order.
+{
+   int max;  // Largest element to be swapped with the last element
+
+   for (int i=list.length(); i>=2; i--)
+   {
+      max = 0;
+
+      for (int j=1; j<i; j++)
+         if (list[j] > list[max])
+            max = j;
+
+      Swap(list[max], list[i-1]);
+   }
+}

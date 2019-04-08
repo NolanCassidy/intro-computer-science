@@ -1,0 +1,15 @@
+Computer Programming 1: Visual Basic, C++
+
+(UC) This one-semester course is the first in the sequence of computer programming courses and is open to students in all grade levels. This project-based course, which is taught in one of our high-end Windows computer labs, provides students with hands-on programming experience. The class teaches logic and problem-solving skills that are transferable to all programming languages, as well as to other situations.
+
+For the majority of the semester students will study the computer language Microsoft Visual Basic. While working both individually and in small groups on a variety of projects, students will learn the syntax of Visual Basic, as well as good programming techniques and coding styles. Having students start their programming sequence with a visual language allows them to begin designing their own computer programs quickly.
+
+For the last part of the semester students will study and write programs using the C++ programming language. All students who are considering pursuing a computer-related career should strongly consider taking this class. In addition, many colleges and universities want engineering and science-oriented freshmen to have computer programming experience.
+
+Computer Programming 2: Python, Java
+
+(UC) This one-semester course is the second in the sequence of computer programming courses. This higher-level course provides students with hands-on programming experience, and it is designed for students who have successfully completed a semester of Computer Programming 1 and wish to continue further in the programming sequence with more advanced work. The course will include larger, more extensive projects (some of which will be student-designed) which students will be expected to complete while working with other students as part of teams.
+
+The first part of the semester will be devoted to learning some basic Python. Then students will being working with Java, which they will use for the remainder of the semester. Students will be expected to learn and use more advanced programming techniques and concepts; good programming style is continually stressed in the lab. In addition to Python and Java, students may choose to use other programming languages for their longer-term projects.
+
+http://redwood.org/rhs/academic/apptech/program/prgclass.htm

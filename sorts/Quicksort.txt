@@ -1,0 +1,44 @@
+void Swap(int & numA, int & numB)
+// This function takes two integer variables
+//  ('numA', 'numB') and interchanges (swaps) them.
+{
+   int temp;  // Temporary variable used during swap
+   temp = numA;
+   numA = numB;
+   numB = temp;
+}
+
+
+void Quicksort(apvector<int> & list, int first, int last)
+// This function uses a Quicksort to sort an array
+//  ('list') of integers in non-decreasing order.  This
+//  function is recursive.  The first time this function
+//  is called, the variable 'first' should be equal to
+//  the POSITION of the first element in the list and
+//  'last' should be equal to the POSITION of the last
+//  element.
+{
+   int low=first, high=last;
+   int midIndex=(first + last) / 2;
+   int midValue=list[midIndex];
+
+   do
+   {
+      while (list[low] < midValue)
+         low++;
+      while (list[high] > midValue)
+         high--;
+
+      if (low <= high)
+      {
+         Swap(list[low], list[high]);
+         low++;
+         high--;
+      }
+   } while (low < high);
+
+   if (high > first)
+      Quicksort(list, first, high);
+   if (low < last)
+      Quicksort(list, low, last);
+}
